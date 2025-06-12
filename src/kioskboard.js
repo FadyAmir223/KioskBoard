@@ -1,6 +1,6 @@
 /*!
 * KioskBoard - Virtual Keyboard ('https://github.com/furcan/KioskBoard')
-* Version: 2.3.0
+* Version: 2.3.4
 * Author: Furkan ('https://github.com/furcan')
 * Copyright 2022 KioskBoard - Virtual Keyboard, MIT Licence ('https://opensource.org/licenses/MIT')*
 */
@@ -673,7 +673,7 @@
                   }
 
                   if (typeof opt.keysCallback === 'function') {
-                    opt.keysCallback(keyValue);
+                    opt.keysCallback(keyValue || '_');
                   }
                 });
               }

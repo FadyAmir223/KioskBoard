@@ -162,6 +162,18 @@ declare namespace KioskBoard {
     keysEnterCallback?: () => void;
 
     /**
+     * @property {function} - Optional, The callback function of any key. This function will be called when any key has been clicked.
+     * @defaultValue `undefined`
+     */
+    keysCallback?: (key: string) => void;
+
+    /**
+     * @property {function} - Optional, The callback function of the Backspace key. This function will be called when the Backspace key has been clicked.
+     * @defaultValue `undefined`
+     */
+    keysBackspaceCallback?: () => void;
+
+    /**
      * @property {boolean} - Optional, The Enter key can close and remove the keyboard. Prevented when `false`
      * @defaultValue `true`
      */

@@ -673,7 +673,7 @@
                   }
 
                   if (typeof opt.keysCallback === 'function') {
-                    opt.keysCallback();
+                    opt.keysCallback(keyValue);
                   }
                 });
               }

@@ -404,12 +404,10 @@
           var keysAllowSpacebar = opt.keysAllowSpacebar === true;
           var spaceKeyValue = keysAllowSpacebar ? ' ' : '';
           var keysSpacebarText = typeof opt.keysSpacebarText === 'string' && opt.keysSpacebarText.length > 0 ? opt.keysSpacebarText : 'Space';
-          var keysEnterText = typeof opt.keysEnterText === 'string' && opt.keysEnterText.length > 0 ? opt.keysEnterText : 'Enter';
 
           var spaceKey = '<span style="font-family:' + fontFamily + ',sans-serif;font-weight:' + fontWeight + ';font-size:' + fontSize + ';" class="kioskboard-key kioskboard-key-space ' + (keysAllowSpacebar ? 'spacebar-allowed' : 'spacebar-denied') + '" data-value="' + spaceKeyValue + '">' + keysSpacebarText + '</span>';
           var capsLockKey = '<span style="font-family:' + fontFamily + ',sans-serif;font-weight:' + fontWeight + ';font-size:' + fontSize + ';" class="kioskboard-key-capslock ' + (isCapsLockActive ? 'capslock-active' : '') + '">' + kioskBoardIconCapslock(keysIconWidth, keysIconColor) + '</span>';
           var backspaceKey = '<span style="font-family:' + fontFamily + ',sans-serif;font-weight:' + fontWeight + ';font-size:' + fontSize + ';" class="kioskboard-key-backspace">' + kioskBoardIconBackspace(keysIconWidth, keysIconColor) + '</span>';
-          var enterKey = '<span style="font-family:' + fontFamily + ',sans-serif;font-weight:' + fontWeight + ';font-size:' + fontSize + ';" class="kioskboard-key-enter">' + keysEnterText + '</span>';
           // static keys: end
 
           // keyboard "specialcharacter" setting is "true": begin
@@ -469,7 +467,7 @@
                 }
               }
             }
-            keysRowElements += '<div class="kioskboard-row kioskboard-row-numpad">' + numpadKeysContent + backspaceKey + enterKey + decimalSeparatorKey + '</div>';
+            keysRowElements += '<div class="kioskboard-row kioskboard-row-numpad">' + numpadKeysContent + backspaceKey + decimalSeparatorKey + '</div>';
           }
           // keyboard type is "numpad": end
 
@@ -507,7 +505,7 @@
             // dynamic keys group: end
 
             // bottom keys group: begin
-            keysRowElements += '<div class="kioskboard-row kioskboard-row-bottom ' + (allowedSpecialCharacters ? 'kioskboard-with-specialcharacter' : '') + '">' + capsLockKey + specialCharacterKey + spaceKey + enterKey + backspaceKey + '</div>';
+            keysRowElements += '<div class="kioskboard-row kioskboard-row-bottom ' + (allowedSpecialCharacters ? 'kioskboard-with-specialcharacter' : '') + '">' + capsLockKey + specialCharacterKey + spaceKey + backspaceKey + '</div>';
             // bottom keys group: end
 
             // add if special character keys allowed: begin
@@ -765,20 +763,6 @@
               });
             }
             // specialcharacter key click listener: end
-
-            // enter key click listener: begin
-            var enterKeyElm = window.document.querySelector('.kioskboard-key-enter');
-            if (enterKeyElm) {
-              keysEventListeners(enterKeyElm, function () {
-                if (opt.keysEnterCanClose === true) {
-                  removeKeyboard();
-                }
-                if (typeof opt.keysEnterCallback === 'function') {
-                  opt.keysEnterCallback();
-                }
-              });
-            }
-            // enter key click listener: end
           };
           // keys click listeners: end
 

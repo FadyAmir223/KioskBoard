@@ -150,18 +150,6 @@ declare namespace KioskBoard {
     keysIconSize?: string;
 
     /**
-     * @property {string} - Optional, Text of the Enter key (Enter/Return). Without text => `" "`
-     * @defaultValue `Enter`
-     */
-    keysEnterText?: string;
-
-    /**
-     * @property {function} - Optional, The callback function of the Enter key. This function will be called when the enter key has been clicked.
-     * @defaultValue `undefined`
-     */
-    keysEnterCallback?: () => void;
-
-    /**
      * @property {function} - Optional, The callback function of any key. This function will be called when any key has been clicked.
      * @defaultValue `undefined`
      */
@@ -172,12 +160,6 @@ declare namespace KioskBoard {
      * @defaultValue `undefined`
      */
     keysBackspaceCallback?: () => void;
-
-    /**
-     * @property {boolean} - Optional, The Enter key can close and remove the keyboard. Prevented when `false`
-     * @defaultValue `true`
-     */
-    keysEnterCanClose?: boolean;
   }
 
   /**

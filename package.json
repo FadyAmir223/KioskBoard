@@ -2,7 +2,7 @@
   "name": "@fadyamir/kioskboard",
   "main": "dist/kioskboard-aio-2.3.4.min.js",
   "types": "index.d.ts",
-  "version": "2.3.6",
+  "version": "2.3.7",
   "description": "A pure JavaScript library for using virtual keyboards.",
   "homepage": "https://github.com/fadyamir223/KioskBoard",
   "files": [
@@ -47,5 +47,6 @@
     "dev:allinone": "yarn dev:lint && yarn src:lint && node .dev/dev-allinone.js",
     "dev:minifier": "yarn dev:allinone && node .dev/dev-minifier.js",
     "build": "yarn dev:minifier"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

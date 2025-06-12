@@ -669,11 +669,13 @@
                     }
 
                     // input trigger change event for update the value
+                    var reactChangeEvent = new Event('input', { bubbles: true });
+                    input.dispatchEvent(reactChangeEvent);
                     input.dispatchEvent(changeEvent);
                   }
 
                   if (typeof opt.keysCallback === 'function') {
-                    opt.keysCallback(keyValue || '_');
+                    opt.keysCallback(keyValue);
                   }
                 });
               }
@@ -727,6 +729,8 @@
                 }
 
                 // input trigger change event for update the value
+                var reactChangeEvent = new Event('input', { bubbles: true });
+                input.dispatchEvent(reactChangeEvent);
                 input.dispatchEvent(changeEvent);
 
                 if (typeof opt.keysBackspaceCallback === 'function') {

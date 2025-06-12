@@ -4,7 +4,7 @@
   "types": "index.d.ts",
   "version": "2.3.1",
   "description": "A pure JavaScript library for using virtual keyboards.",
-  "homepage": "https://github.com/furcan/KioskBoard",
+  "homepage": "https://github.com/fadyamir223/KioskBoard",
   "files": [
     "index.d.ts",
     "build",
@@ -21,14 +21,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/furcan/KioskBoard.git"
+    "url": "https://github.com/fadyamir223/KioskBoard.git"
   },
   "bugs": {
-    "url": "https://github.com/furcan/KioskBoard/issues"
+    "url": "https://github.com/fadyamir223/KioskBoard/issues"
   },
-  "author": "Furkan (https://github.com/furcan)",
+  "author": "Furkan (https://github.com/fadyamir223)",
   "contributors": [
-    "Furkan (https://github.com/furcan)"
+    "Furkan (https://github.com/fadyamir223)"
   ],
   "license": "MIT",
   "devDependencies": {
